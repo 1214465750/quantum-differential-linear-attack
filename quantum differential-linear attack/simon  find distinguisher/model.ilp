@@ -1,0 +1,11 @@
+\ Model SIMON_DiffLinear_Cryptanalysis_copy
+\ LP format - for model browsing. Use MPS format to capture full model detail.
+\ Signature: 0xf15baa933b104e65
+Minimize
+  0 abs_corr + 0 diffLinComplement_corr
+Subject To
+Bounds
+ -infinity <= diffLinComplement_corr <= 0
+General Constraints
+ log_corr: abs_corr = LOG ( diffLinComplement_corr )
+End
